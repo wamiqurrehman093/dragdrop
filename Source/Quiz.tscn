@@ -1,0 +1,121 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Source/Quiz.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/no_virus/No Virus.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Source/DropBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/DragBox.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="Quiz" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Question" type="Label" parent="."]
+margin_left = 40.0
+margin_top = 43.0
+margin_right = 1240.0
+margin_bottom = 223.0
+rect_min_size = Vector2( 1200, 180 )
+text = "Quest: Drag the bottom text labels in the top empty boxes."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DropBox1" parent="." instance=ExtResource( 3 )]
+margin_left = 256.0
+margin_top = 256.0
+margin_right = 496.0
+margin_bottom = 336.0
+
+[node name="DropBox2" parent="." instance=ExtResource( 3 )]
+margin_left = 256.0
+margin_top = 352.0
+margin_right = 496.0
+margin_bottom = 432.0
+
+[node name="DropBox3" parent="." instance=ExtResource( 3 )]
+margin_left = 784.0
+margin_top = 256.0
+margin_right = 864.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="DropBox4" parent="." instance=ExtResource( 3 )]
+margin_left = 784.0
+margin_top = 352.0
+margin_right = 864.0
+margin_bottom = 432.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="DropBox5" parent="." instance=ExtResource( 3 )]
+margin_left = 940.0
+margin_top = 256.0
+margin_right = 1020.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="DropBox6" parent="." instance=ExtResource( 3 )]
+margin_left = 940.0
+margin_top = 352.0
+margin_right = 1020.0
+margin_bottom = 432.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="DragBox1" parent="." instance=ExtResource( 4 )]
+margin_left = 256.0
+margin_top = 512.0
+margin_right = 496.0
+margin_bottom = 592.0
+
+[node name="Label" parent="DragBox1/ColorRect" index="0"]
+text = "A"
+
+[node name="DragBox2" parent="." instance=ExtResource( 4 )]
+margin_left = 256.0
+margin_top = 608.0
+margin_right = 496.0
+margin_bottom = 688.0
+
+[node name="Label" parent="DragBox2/ColorRect" index="0"]
+text = "B"
+
+[node name="DragBox3" parent="." instance=ExtResource( 4 )]
+margin_left = 784.0
+margin_top = 512.0
+margin_right = 864.0
+margin_bottom = 592.0
+
+[node name="Label" parent="DragBox3/ColorRect" index="0"]
+text = "C"
+
+[node name="DragBox4" parent="." instance=ExtResource( 4 )]
+margin_left = 784.0
+margin_top = 608.0
+margin_right = 864.0
+margin_bottom = 688.0
+
+[node name="Label" parent="DragBox4/ColorRect" index="0"]
+text = "D"
+
+[editable path="DragBox1"]
+[editable path="DragBox2"]
+[editable path="DragBox3"]
+[editable path="DragBox4"]
